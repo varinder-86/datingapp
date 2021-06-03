@@ -1,0 +1,19 @@
+<h1>INTERNAL SERVER Error</h1>
+<ng-container *ngIf="error">
+    <h5 class="text-dander">Error:   {{error.messages}} </h5>
+    <p class="font-weight-bold">Note:     </p>
+    <p>  </p>
+    <ol>
+        <li>open the chrome</li>
+        <li>inspect the network tab</li>
+        <li>check the failing request</li>
+        <li>
+            examin the request
+        </li>
+        <li>reproduce an error for postman</li>
+    </ol>
+    <p>following is investigation</p>
+    <code class="mt-2" style="background-color: whitesmoke;">{{error.details}}</code>
+</ng-container>
+    
+   
