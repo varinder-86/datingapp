@@ -32,15 +32,10 @@ namespace API.Controllers
         }
 
         [HttpGet("server-error")]
-        public ActionResult<AppUser> GetServerError()
-        {
-          
-            var thing = _context.Users.Find(-1);
-
-            var thingToReturn = thing.ToString();
-
-            return thingToReturn;
-                      
+        public ActionResult<string> GetServerError()
+        { 
+        var thing = _context.Users.Find(-1);
+        var thingToReturn = thing.ToString(); return thingToReturn;       
         }
 
         [HttpGet("bad-request")]
@@ -49,4 +44,5 @@ namespace API.Controllers
             return BadRequest("This was not a good request");
         }
     }
-} 
+}
+ 
